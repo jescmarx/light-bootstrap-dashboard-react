@@ -16,70 +16,61 @@
 
 */
 import Dashboard from "views/Dashboard.js";
-import UserProfile from "views/UserProfile.js";
-import TableList from "views/TableList.js";
-import Typography from "views/Typography.js";
-import Icons from "views/Icons.js";
+import SourceManagement from "views/SourceManagement.js";
+import ArticleDatabase from "views/ArticleDatabase.js";
 import Maps from "views/Maps.js";
-import Notifications from "views/Notifications.js";
-import Upgrade from "views/Upgrade.js";
+import Timeline from "views/Timeline.js";
+import Profiles from "views/Profiles.js";
+import BriefBuilder from "views/BriefBuilder.js";
 
 const dashboardRoutes = [
   {
-    upgrade: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "nc-icon nc-alien-33",
-    component: Upgrade,
-    layout: "/admin"
-  },
-  {
     path: "/dashboard",
-    name: "Dashboard",
+    name: "Monitor Home",
     icon: "nc-icon nc-chart-pie-35",
     component: Dashboard,
     layout: "/admin"
   },
   {
-    path: "/user",
-    name: "User Profile",
-    icon: "nc-icon nc-circle-09",
-    component: UserProfile,
-    layout: "/admin"
-  },
-  {
-    path: "/table",
-    name: "Table List",
-    icon: "nc-icon nc-notes",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-    path: "/typography",
-    name: "Typography",
+    path: "/sources",
+    name: "Sources",
     icon: "nc-icon nc-paper-2",
-    component: Typography,
+    component: SourceManagement,
     layout: "/admin"
   },
   {
-    path: "/icons",
-    name: "Icons",
-    icon: "nc-icon nc-atom",
-    component: Icons,
+    path: "/articles",
+    name: "Database",
+    icon: "nc-icon nc-notes",
+    component: ArticleDatabase,
     layout: "/admin"
   },
   {
     path: "/maps",
-    name: "Maps",
+    name: "Map View",
     icon: "nc-icon nc-pin-3",
     component: Maps,
     layout: "/admin"
   },
   {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "nc-icon nc-bell-55",
-    component: Notifications,
+    path: "/timeline",
+    name: "Timeline",
+    icon: "nc-icon nc-time-alarm",
+    component: Timeline,
+    layout: "/admin"
+  },
+  {
+    path: "/profiles",
+    name: "Profiles",
+    icon: "nc-icon nc-bank",
+    component: Profiles,
+    layout: "/admin"
+  },
+  {
+    path: "/brief-builder",
+    name: "Brief Builder",
+    icon: "nc-icon nc-single-copy-04",
+    component: BriefBuilder,
     layout: "/admin"
   }
 ];
