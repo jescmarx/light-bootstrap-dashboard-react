@@ -186,3 +186,27 @@ Dribbble: <https://dribbble.com/creativetim>
 Google+: <https://plus.google.com/+CreativetimPage>
 
 Instagram: <https://instagram.com/creativetimofficial>
+
+## China–Iran–GCC Investment Monitor MVP
+
+This branch repurposes the dashboard shell for Rihla Research & Advisory's bilingual open-source research intelligence workflow.
+
+### MVP capabilities
+
+- Monitor home for China–Iran–GCC economic, technology, infrastructure, energy, finance, logistics, industrial, and strategic investment activity.
+- Source management workflow for lawful public sources only.
+- Article and project database with search and filter controls.
+- Map view, investment timeline, country profiles, and company/institution profiles.
+- Brief builder for weekly briefs, country briefs, sector briefs, company profiles, risk memos, client advisory notes, scenario analysis, and Chicago-style citation seeds.
+- Supabase/PostgreSQL schema with pgvector fields for keyword, filtered, and semantic search.
+- Python ingestion skeleton using feedparser, requests, BeautifulSoup, and Trafilatura.
+
+### Model routing policy
+
+Use DeepSeek V4 Flash for routine Mandarin-to-English translation, summarization, tagging, entity extraction, company extraction, sector classification, relevance scoring, and first-pass analytical notes. Use DeepSeek V4 Pro, GPT, or Claude only for final client memos, scenario analysis, high-stakes synthesis, and polished advisory writing.
+
+### Compliance policy
+
+Collect only from lawful, publicly accessible sources, RSS feeds, APIs, uploaded documents, newsletters, and manually added URLs. Do not bypass paywalls, login walls, `robots.txt`, censorship systems, or access controls.
+
+See `docs/architecture.md`, `docs/adding-sources.md`, `supabase/schema.sql`, and `scripts/ingestion/README.md` for implementation notes.
